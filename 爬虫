@@ -16,7 +16,7 @@ class ZLZP:
 
     def getPage(self,pageIndex):
         try:
-            url = 'http://sou.zhaopin.com/jobs/searchresult.ashx?jl=%E5%8C%97%E4%BA%AC+%E4%B8%8A%E6%B5%B7+%E5%B9%BF%E5%B7%9E+%E6%B7%B1%E5%9C%B3&kw=%E7%88%AC%E8%99%ABpython&p=1&isadv=0 
+            url = 'http://search.0577hr.com/result.aspx? 
 
 ' + str(pageIndex)
             request = urllib2.Request(url,headers=self.headers)
@@ -58,7 +58,7 @@ class ZLZP:
             print u"第%d页\t职位:%s\t工资:%s\t公司地点:%s\n%s" %(page,story[0],story[2],story[3],story[1])
 
     def start(self):
-        print u'正在读取智联招聘，回车查看，Q退出'
+        print u'正在读取，回车查看，Q退出'
         self.enable = True
         self.loadPage()
         nowPage = 0
