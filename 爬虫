@@ -5,7 +5,7 @@ import re
 import  thread
 import time
 
-class wzrczyw:
+class wzrlzyw:
 
     def __init__(self):
         self.pageIndex = 1
@@ -67,5 +67,6 @@ class wzrczyw:
                 del self.stories[0]
                 self.getOneStory(pageStories,nowPage)
 
-spider = wzeczyw()
+spider = wzrlzyw()
 spider.start()
+
