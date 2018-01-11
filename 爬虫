@@ -18,9 +18,9 @@ except urllib2.URLError, e:
         print e.reason
 p = 0
 j = 0
-content_pattern = re.compile('<li class="seaList12".*?>.*?<a.*?>(.*?)</a>.*?', re.S) 
+content_pattern = re.compile('<li class="seaList12">.*?.*?<a.*?>(.*?)</a>.*?', re.S) 
 content_list = re.findall(content_pattern, html)
-content_pattern1 = re.compile('li class="seaList22".*?>(.*?)</li>.*?', re.S)    
+content_pattern1 = re.compile('li class="seaList22">.*?(.*?)</li>.*?', re.S)    
 content_list1 = re.findall(content_pattern1, html)
 
 for item in content_list:                                         
@@ -31,9 +31,10 @@ for item in content_list:
 
     for i in range(0,1):                                          
         print content_list1[i]
-
+    
     input = raw_input()                                          
     if input == "e":       
         break
-    print "******************************下一个******************************\n"
+    print "下一个\n"
+
 
